@@ -8,6 +8,7 @@ body{
     color: white;
     font-family: $main-font;
     line-height:1.2;
+    text-align:center;
 }
 
 *{
@@ -46,8 +47,10 @@ nav{
         width:100%;
         background: $heading-blue;
         position:relative;
+    
 
-        img{ width:80%;
+        img{
+        width:80%;
         margin-left:auto;
         margin-right:auto;}}
 
@@ -85,6 +88,8 @@ nav{
     
 }
 
+//Feature
+
 .stay-productive{
     text-align:left;
     img{ width: 100%;
@@ -94,6 +99,8 @@ nav{
 .testimonies{
     &-item{
         background: $gray-blue;
+        margin-right:auto;
+        margin-left: auto;
         width:300px;
         height:200px;
         text-align:left;
@@ -158,6 +165,7 @@ nav{
 
     
     &-banner{
+       
         background: $heading-blue;
         padding: 1rem 0.5rem;
         width:85%;
@@ -200,6 +208,7 @@ nav{
             padding: 5px 7.5px;
             border: 1px solid white;
             border-radius: 50%;
+            margin:0.5rem;
         }
     }
 

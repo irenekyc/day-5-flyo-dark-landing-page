@@ -2,11 +2,9 @@
 .wrapper{
     padding: 0 4%;
 }
-
 .wrapper-narrow{
     padding: 0 8%;
 }
-
 @for $i from 1 through 10{
     .py-#{$i}{ padding-top: 1rem *$i ; padding-bottom: 1rem*$i;}
 }

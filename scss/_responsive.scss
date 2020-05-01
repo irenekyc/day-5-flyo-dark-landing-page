@@ -1,10 +1,125 @@
-@mixin SMDevice{
-    body{
-        text-align: center;
+
+@mixin FEATUREGRID{
+    .grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.5rem;
+    }
+    .feature{
+        padding: 2rem;
+    }
+}
+
+@mixin IPADNAVBAR {
+    nav ul{
+        width:240px;
+    }
+}
+
+@mixin TESTMONITIES {
+    .testimonies .flex-wrap{
+        display:flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+}
+
+@mixin STAYPRODUCTIVE{
+    .stay-productive {
+        .flex{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                padding-left:2rem;
+            }
+            h1{
+                text-align: left;
+                font-size:2.4rem;
+            }
+        }
+    }
+}
+
+@mixin BANNER{
+    .call-for-action-banner{
+        width:850px;
+        padding: 1rem 2rem;
+
+        .flex-wrap{
+            display:flex;
+            p{
+                width:70%;
+            }
+            .btn{
+                padding: 15px 36px;
+                margin:auto;
+            }
+        }
+    }
+}
+
+@mixin FOOTER {
+    .footer .flex-wrap{
+        display:flex;
+        justify-content: space-between;
+
+        div{
+            width:15%;
+            margin:1rem;
+   
+        }
+
+        div:first-child{
+            flex:1;
+        }
+
     }
 }
 
 
-@media (max-width:767px){
-    @include SMDevice;
+@media (min-width:766px){
+    @include FEATUREGRID;
+    @include IPADNAVBAR;
+    .wrapper{
+        padding: 0 8%;
+    }
+    .large{
+        font-size:2.5rem;
+    }
+    .lead{
+        font-size:1.5rem;
+    }
+    @include TESTMONITIES;
 }
+
+@media (min-width:1280px){
+  
+    .wrapper{
+        padding: 0 12%;
+    }
+    .wrapper-narrow{
+        padding: 0 18%;
+    }
+    .hero-img{
+      
+        img{
+            width:65%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+    .hero-main-text{
+        width:50%;
+        margin-right:auto;
+        margin-left:auto;
+    }
+    @include STAYPRODUCTIVE;
+    @include BANNER;
+    @include FOOTER;
+}
+
+
+
