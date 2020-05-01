@@ -1,0 +1,213 @@
+@import 'variables';
+@import 'utilities';
+
+
+body{
+    font-size:14px;
+    background: $main-background;
+    color: white;
+    font-family: $main-font;
+    line-height:1.2;
+}
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+//NAV
+
+nav{
+    background: $heading-blue;
+    img {
+        width:80px;
+    }
+    ul{
+        width:50%;
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+//HERO 
+.hero{
+    background: $primary-blue;
+    &-img{
+        width:100%;
+        background: $heading-blue;
+        position:relative;
+
+        img{ width:80%;
+        margin-left:auto;
+        margin-right:auto;}}
+
+    &-main{
+        background: $heading-blue;
+        position: relative;
+        z-index:2;
+
+        &:before{
+            content:"";
+            position:absolute;
+            top:0;
+            width:100%;
+            height:120px;
+            left:0;
+            background: url('../images/bg-curvy-mobile.svg');
+            z-index:-1;
+        }
+        &:after{
+            content:"";
+            position:absolute;
+            top:120px;
+            left:0;
+            width:100%;
+            height: calc(100% - 120px);
+            background: $main-background;
+            z-index:-1;
+
+        }
+
+        &-text{
+            z-index:3;
+        }
+    }
+    
+}
+
+.stay-productive{
+    text-align:left;
+    img{ width: 100%;
+    margin:auto;}
+}
+
+.testimonies{
+    &-item{
+        background: $gray-blue;
+        width:300px;
+        height:200px;
+        text-align:left;
+        display:flex;
+        flex-direction: column;
+        padding: 1.2rem;
+        font-size:0.8rem;
+        border-radius: 12px;
+    }
+    &-text{
+        flex:1;
+    }
+
+    &-profile{
+        display:flex;
+        align-items: center;
+    }
+
+    &-profile-pic{
+        width:40px;
+        height:40px;
+        border-radius: 50%;
+        margin-right:0.5rem;
+    }
+}
+
+.testimonies-item:first-child{
+    position:relative;
+    &:before{
+        content:"";
+        position:absolute;
+        top:-30px;
+        left:0;
+        height:36px;
+        width:44px;
+        background: url('../images/bg-quotes.png');
+        background-size:cover;
+       z-index:-1;
+
+    }
+}
+
+
+////CALL FOR ACTION
+.call-for-action{
+    position:relative;
+    background:$footer-blue;
+    z-index:2;
+
+
+    &:after{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:50%;
+        content: "";
+        background:$main-background;
+        z-index:-1;
+
+    }
+
+    
+    &-banner{
+        background: $heading-blue;
+        padding: 1rem 0.5rem;
+        width:85%;
+        margin:auto;
+        border-radius: 36px;
+        z-index:3;
+        }
+    input{
+        width:90%;
+        height:50px;
+        border-radius: 24px;
+        border:none;
+        outline:none;
+        font-size:12px;
+        font-family: $main-font;
+        padding:8px 15px;
+    }
+}
+
+///FOOTER
+.footer{
+    background: $footer-blue;
+    text-align: left;
+
+    ul{
+        li{
+            margin-top:1rem;
+        }
+    }
+    .social-media{
+     
+        ul{ 
+        display:flex;
+        width:50%; 
+        margin:auto;
+        justify-content: space-around;
+        font-size:1rem;}
+
+        i{
+            padding: 5px 7.5px;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+    }
+
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@import 'responsive';

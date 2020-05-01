@@ -1,0 +1,72 @@
+//Layout
+.wrapper{
+    padding: 0 4%;
+}
+
+.wrapper-narrow{
+    padding: 0 8%;
+}
+
+@for $i from 1 through 10{
+    .py-#{$i}{ padding-top: 1rem *$i ; padding-bottom: 1rem*$i;}
+}
+
+@for $i from 1 through 10{
+    .my-#{$i}{ margin-top: 1rem *$i ; margin-bottom: 1rem*$i;}
+}
+@for $i from 1 through 10{
+    .m-#{$i}{ margin: 1rem *$i ;}
+}
+@for $i from 1 through 10{
+    .p-#{$i}{ padding: 1rem *$i ;}
+}
+
+.flex-box{
+    display:flex;
+    justify-content: space-between;
+}
+
+//Text
+.large{
+    font-size:1.5rem;
+}
+
+.lead {
+    font-weight:700;
+    font-size:1.2rem;
+}
+
+.heading-text{
+    font-family: $primary-font;
+}
+
+.lh-2{
+    line-height:2;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.align-center{
+    text-align: center;
+}
+
+
+//Buttons
+.btn{
+    padding: 12px 72px;
+    cursor: pointer;
+    border-radius: 24px;
+
+    &.btn-main{
+        background: linear-gradient(to right, $primary-cyan, $primary-blue);
+    }
+}
+
+.link-primary-cyan{
+    color: $primary-cyan;
+    border-bottom: 1px solid $primary-cyan;
+    padding: 6px 0;
+
+}
